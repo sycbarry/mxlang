@@ -1,0 +1,4 @@
+
+class test {
+    init() { return true; }
+}

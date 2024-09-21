@@ -1,0 +1,19 @@
+
+use "http";
+use "report";
+
+var response = http.get("https://google.com");
+print response.getStatusCode();
+
+@test
+fun test_function() {
+    print true;
+    pass();
+}
+
+var r = report.init(
+    $\\\("title", "value"),
+    $\\\("path", "./output.pdf")
+);
+
+r.build();

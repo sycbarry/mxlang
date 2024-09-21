@@ -1,0 +1,101 @@
+use "mbo";
+
+
+var asset = mbo.mif.get("ASSET").all()
+var asset = mbo.restapi.get("ASSET").random(10)
+var asset = mbo.service.get("ASSET").first(10)
+var asset = mbo.oslcc.get("ASSET").last(10)
+var asset = mbo.db.get("ASSET").onid("23lkj")
+var asset = mbo.db.get("ASSET").where("value = 1");
+
+
+@test
+fun test_http() {
+    var asset = mbo.restapi.get("ASSET").where(" value = 1");
+    var assetnum = asset.getvalue("ASSETNUM").from("ASSET"); // this traverses the list and gets the value directly
+}
+
+(mbo)
+-> is at least one element.
+-> can contain relation elements.
+-> must be traversed.
+-> must be indexable.
+
+
+
+@rule
+[]  -> base methods.
+    -> data
+    ->
+
+
+# mbo node.
+--> this is a key:value object.
+
+# mbo set
+--> this is a dictionary of mbo nodes.
+
+# mbo tree. (this contains the hierarchy of elements)
+--> this is a structure of mbo sets.
+
+# this returns an mbo set
+mbo.sql.getSet("ASSET")
+var assets = mbo.sql.getSet("ASSET").filter("value = 1"); # on filter.
+print assets.valueOf("ASSETNUM")
+
+# this allows us to simply query the database directly.
+mbo.sql.query("")
+
+
+mbo.restapi.getSet("ASSET").where( $(1, 2) )
+
+node (key, value)
+
+mbo set ->
+    ( dictionary<node> )
+
+mbo tree
+                    (dictionary<node>)
+                            |
+    (dictionary<node>)-(dictionary<node>)-(dictionary<node>)
+
+
+
+
+
+
+
+
+
+Reports:
+1. what do we include?
+    - title
+    - description
+
+    - endpoints used with methods ( POST / https://.. )
+    - response from each endpoint
+    - expected response
+    - actual response
+
+    - test result.
+
+
+
+var report = report.init();
+report.addSection(
+    "title", "description", "content", "type = [text, json]");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
