@@ -1,4 +1,3 @@
-
 use "http";
 use "report";
 
@@ -12,8 +11,8 @@ fun test_function() {
 }
 
 var r = report.init(
-    $\\\("title", "value"),
-    $\\\("path", "./output.pdf")
+    $("title", "value"),
+    $("path", "./output.pdf")
 );
 
 r.build();
