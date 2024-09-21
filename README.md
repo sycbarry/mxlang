@@ -54,10 +54,10 @@ var a = array.new(1, 2, 3, 5);
 
 a.getAt(0);
 
-// a.listAll();
+a.listAll();
 a.append(1);
 a.setAt(1, 10);
-// a.size();
+a.size();
 
 
 var d = dictionary.new(
@@ -65,30 +65,30 @@ var d = dictionary.new(
     $(1 , 4)
 );
 
-/// d.put(1, 2);
+d.put(1, 2);
 
-/// print d.containsKey(1);
+print d.containsKey(1);
 
-/// d.put(1, 2);
-/// d.getKey(1);
-/// var keys = d.keys();
+d.put(1, 2);
+d.getKey(1);
+var keys = d.keys();
 
 
 var b = array.copyFrom(a);
 
 var d = 4;
 
-/// print size("asdflk");
+print size("asdflk");
 
 
-// @test
+@test
 fun test_this() {
     var return_value = http.ping("https://youtube.com").getStatusCode();
     print(return_value);
 }
 
 
-/// print typeof(int(100));
+print typeof(int(100));
 
 
 var testr = mxtest.init
@@ -100,10 +100,10 @@ var testr = mxtest.init
 
 // https://webhook.site/67c967f5-2868-478a-8415-5f0dc95c593f
 
-// print testr.getApiEndpoint();
-// print testr.getApiKey();
+print testr.getApiEndpoint();
+print testr.getApiKey();
 
-// @test
+@test
 fun test_ping() {
     var responseCode = testr.oslc.ping().getStatusCode();
     if( responseCode != 200 ) {
@@ -113,7 +113,7 @@ fun test_ping() {
     }
 }
 
-// @test
+@test
 fun test_get() {
     var response = testr.oslc.getjson().getResponseBody();
     print(response);
@@ -123,7 +123,7 @@ fun test_get() {
 
 
 
-// @test
+@test
 fun test_post() {
     var json = "
     { 'test': [ 'a', 'b' ] }
@@ -136,10 +136,10 @@ fun test_post() {
         pass();
     }
     assertEquals("MAX", "MAX");
-    // print(response.getResponseBody());
+    print(response.getResponseBody());
 }
 
-// @test
+@test
 fun test_usernamepassword() {
     var mxtestapi = mxtest.init();
     mxtestapi.setUsername("username");
